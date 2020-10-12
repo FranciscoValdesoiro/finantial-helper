@@ -1,20 +1,56 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Balance</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-text color="primary">
+        <p class="main-value">100</p>
+      </ion-text>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-list>
+    <ion-item>
+      <ion-icon slot="start" name="bulb-outline"></ion-icon>
+      <p>Gastos y necesidades</p>
+      <p slot="end">1500 €</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start" name="newspaper-outline"></ion-icon>
+      <p>Educación</p>
+      <p slot="end">33</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start" name="cash-outline"></ion-icon>
+      <p>Ahorro</p>
+      <p slot="end">33</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start" name="airplane-outline"></ion-icon>
+      <p>Ocio</p>
+      <p slot="end">33</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start" name="cellular-outline"></ion-icon>
+      <p>Inversion</p>
+      <p slot="end">33</p>
+    </ion-item>
+    <ion-item>
+        <ion-icon slot="start" name="bandage-outline"></ion-icon>
+        <p>Dar</p>
+        <p slot="end">33</p>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
