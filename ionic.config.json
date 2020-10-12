@@ -1,0 +1,7 @@
+{
+  "name": "finantial-helper",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
