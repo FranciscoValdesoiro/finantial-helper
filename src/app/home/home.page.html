@@ -15,41 +15,16 @@
 
     <ion-card-content>
       <ion-text color="primary">
-        <p class="main-value">100</p>
+        <p class="main-value">{{balance | currency: 'EUR':'symbol-narrow': '1.0-2'}}</p>
       </ion-text>
     </ion-card-content>
   </ion-card>
   
   <ion-list>
-    <ion-item>
-      <ion-icon slot="start" name="bulb-outline"></ion-icon>
-      <p>Gastos y necesidades</p>
-      <p slot="end">1500 €</p>
-    </ion-item>
-    <ion-item>
-      <ion-icon slot="start" name="newspaper-outline"></ion-icon>
-      <p>Educación</p>
-      <p slot="end">33</p>
-    </ion-item>
-    <ion-item>
-      <ion-icon slot="start" name="cash-outline"></ion-icon>
-      <p>Ahorro</p>
-      <p slot="end">33</p>
-    </ion-item>
-    <ion-item>
-      <ion-icon slot="start" name="airplane-outline"></ion-icon>
-      <p>Ocio</p>
-      <p slot="end">33</p>
-    </ion-item>
-    <ion-item>
-      <ion-icon slot="start" name="cellular-outline"></ion-icon>
-      <p>Inversion</p>
-      <p slot="end">33</p>
-    </ion-item>
-    <ion-item>
-        <ion-icon slot="start" name="bandage-outline"></ion-icon>
-        <p>Dar</p>
-        <p slot="end">33</p>
+    <ion-item *ngFor="let jar of jars">
+      <ion-icon slot="start" [name]="jar.icon"></ion-icon>
+      <p>{{jar.name}}</p>
+      <p slot="end">{{jar.amount | currency: 'EUR':'symbol-narrow': '1.0-2'}}</p>
     </ion-item>
   </ion-list>
 
