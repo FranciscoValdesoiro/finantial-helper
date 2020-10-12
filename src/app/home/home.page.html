@@ -1,20 +1,31 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Balance</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-text color="primary">
+        <p class="main-value">{{balance | currency: 'EUR':'symbol-narrow': '1.0-2'}}</p>
+      </ion-text>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-list>
+    <ion-item *ngFor="let jar of jars">
+      <ion-icon slot="start" [name]="jar.icon"></ion-icon>
+      <p>{{jar.name}}</p>
+      <p slot="end">{{jar.amount | currency: 'EUR':'symbol-narrow': '1.0-2'}}</p>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
